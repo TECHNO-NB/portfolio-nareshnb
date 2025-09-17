@@ -1,3 +1,6 @@
+
+/* eslint-disable react/no-unescaped-entities */
+
 "use client";
 import { useMemo } from "react";
 import { motion } from "framer-motion";
@@ -140,16 +143,17 @@ export default function Home() {
                 Available for freelance & full-time
               </p>
               <h1 className="text-4xl/tight font-bold sm:text-5xl/tight">
-                Hi, I’m{" "}
+                Hi, I&apos;m{" "}{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-300">
                   Naresh B.
                 </span>
                 <br /> MERN Stack Developer
               </h1>
               <p className="mt-5 max-w-xl text-slate-300">
-                I build fast, accessible, and scalable web apps end‑to‑end using
+                I build fast, accessible, and scalable web apps end-to-end using
                 MongoDB, Express, React/Next.js, and Node.js — with modern DX,
                 clean architecture, and delightful UI.
+              
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
@@ -241,10 +245,10 @@ export default function Home() {
             >
               <h2 className="text-2xl font-semibold">About Me</h2>
               <p className="mt-4 text-slate-300">
-                Self‑taught MERN developer with a knack for shipping polished,
-                production‑ready features. I care deeply about performance,
-                accessibility, and clean code. I’ve built complex apps including
-                e‑commerce, social, dashboards, and AI integrations.
+                Self-taught MERN developer with a knack for shipping polished,
+  production-ready features. I care deeply about performance,
+  accessibility, and clean code. I&apos;ve built complex apps including
+  e-commerce, social, dashboards, and AI integrations.
               </p>
               <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-300">
                 {[
@@ -394,13 +398,14 @@ export default function Home() {
           <div className="mt-8 grid gap-4">
             {[
               {
-                role: "Full‑Stack Developer",
+                role: "Full-Stack Developer",
                 company: "Freelance / Remote",
                 period: "2022 — Present",
                 points: [
-                  "Built and maintained 10+ full‑stack MERN apps from concept to production.",
-                  "Improved Core Web Vitals (LCP < 2s) and reduced bundle by 35%.",
-                  "Implemented role‑based access, secure payments, and observability.",
+             "Built and maintained 10+ full-stack MERN apps from concept to production.",
+"Improved Core Web Vitals (LCP < 2s) and reduced bundle by 35%.",
+"Implemented role-based access, secure payments, and observability.",
+
                 ],
               },
             ].map((job) => (
@@ -431,7 +436,7 @@ export default function Home() {
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-semibold">Contact</h2>
           <p className="mt-3 text-slate-300">
-            Have a project in mind? Let’s build something great together.
+            Have a project in mind? Let's build something great together.
           </p>
           <form
             onSubmit={(e) => {
