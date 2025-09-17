@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #1A0B2E;
+  --foreground: #171717;
+  --navbar-bg-: #1A0B2E;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1A0B2E;
+    --foreground: #ededed;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: white;
+  background: var(--background);
+  font-family: sans-serif;
+  font-weight: 400;
+  scroll-behavior: smooth;
+}
+
+.bg {
+  background-image: url("../public/Gradient.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  padding: 3em;
+
+
+}
+
+.g {
+  background-image: url("../public/Gradient.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  padding: 12em;
+  margin-right: 5em;
+}
+
+.span {
+  background-image: url("../public/Ellipse\ 5.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  z-index: 3;
+}
+
+.project {
+  width: 100vw;
+  height: max-content;
+  background-image: url('../public/Gradient.png');
+}
+
+.glow {
+  font-size: 5em;
+  font-weight: bolder;
+  font-family: monospace;
+  background: radial-gradient(circle, rgba(106, 0, 255, 0.8), rgba(106, 0, 255, 0.4));
+  border-radius: 100%;
+  color: white;
+  padding: 0.1em 0.3em;
+
+  text-shadow: 0px 0px 10px;
+  animation: animate 1.5s infinite alternate;
+}
+.boxes{
+  display: flex;
+  margin-top: 30px;
+  gap:20px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4em;
+  height: 4em;
+  background-color: #251C31;
+  border-radius: 100%;
+  border: 1px solid #000;
+}
+
+
+@keyframes animate {
+  0% {
+    box-shadow: 0px 0px 10px rgb(65, 73, 233);
+  }
+
+  100% {
+    box-shadow: 0px 0px 30px rgb(65, 73, 233);
+  }
+}
