@@ -106,7 +106,7 @@ const ContactComp = () => {
           <p className="mt-4 text-sm text-slate-300">{status}</p>
         )}
 
-        <div className="mt-6 flex items-center gap-4 text-sm text-slate-300">
+        <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-slate-300">
           <a
             className="inline-flex items-center gap-2 hover:text-white"
             href="mailto:bhattarain538@gmail.com"

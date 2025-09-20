@@ -19,6 +19,7 @@ import {
   Wrench,
   Cpu,
   Globe2,
+  ArrowUp 
 } from "lucide-react";
 import landingPagePic from "@/public/naresh.jpg";
 import Image from "next/image";
@@ -28,6 +29,7 @@ import ContactComp from "@/components/ContactComp";
 export default function Home() {
 
     const [quality, setQuality] = useState(80); 
+    const [visible, setVisible] = useState(false);
  
     
 
@@ -47,6 +49,21 @@ export default function Home() {
       }
     }
   }, []);
+
+  useEffect(() => {
+      const toggleVisibility = () => {
+      if (window.scrollY > 600) { // show after 300px
+        setVisible(true);
+      } else {
+        setVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, [])
+  
+
   const skills = useMemo(
     () => [
       { name: "MongoDB", level: 90, icon: <Database className="size-5" /> },
@@ -109,6 +126,15 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-slate-100 selection:bg-indigo-500/60 selection:text-white">
       {/* Sticky Nav */}
+    
+     {visible && (
+  <ArrowUp
+    className="fixed text-white bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 size-8 bottom-4 hover:bottom-5  right-4 z-50 cursor-pointer rounded-full p-1
+               hover:scale-110 hover:shadow-lg transition-all duration-300"
+    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+  />
+)}
+
       <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-slate-900/60 border-b border-white/10">
         <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
