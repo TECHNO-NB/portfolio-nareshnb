@@ -362,7 +362,7 @@ export default function Home() {
                 className="group overflow-hidden rounded-3xl border border-white/10 bg-white/5"
               >
                 <div className="relative aspect-[16/10] overflow-hidden">
-                  <img
+                  <Image
                     src={p.image}
                     alt={p.title}
                     className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
