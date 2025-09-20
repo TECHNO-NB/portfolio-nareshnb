@@ -129,7 +129,7 @@ export default function Home() {
     
      {visible && (
   <ArrowUp
-    className="fixed text-white bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 size-8 bottom-4 hover:bottom-5  right-4 z-50 cursor-pointer rounded-full p-1
+    className="fixed text-white  size-8 bottom-4 hover:bottom-5  right-4 z-50 cursor-pointer rounded-full p-1
                hover:scale-110 hover:shadow-lg transition-all duration-300"
     onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
   />
