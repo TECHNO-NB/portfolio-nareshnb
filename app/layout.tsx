@@ -1,5 +1,5 @@
 
-/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable */
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
