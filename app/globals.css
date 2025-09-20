@@ -32,7 +32,7 @@ body {
 }
 
 .bg {
-  background-image: url("../public/Gradient.png");
+ 
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -42,7 +42,7 @@ body {
 }
 
 .g {
-  background-image: url("../public/Gradient.png");
+ 
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -51,7 +51,7 @@ body {
 }
 
 .span {
-  background-image: url("../public/Ellipse\ 5.png");
+ 
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -61,7 +61,7 @@ body {
 .project {
   width: 100vw;
   height: max-content;
-  background-image: url('../public/Gradient.png');
+
 }
 
 .glow {

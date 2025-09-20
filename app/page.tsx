@@ -2,7 +2,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 "use client";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowDown,
@@ -22,13 +22,27 @@ import {
 } from "lucide-react";
 import landingPagePic from "@/public/naresh.jpg";
 import Image from "next/image";
-/**
- * Single-file, modern, responsive portfolio for a MERN Stack developer
- * Tech: Next.js (App Router), TypeScript, Tailwind CSS, Framer Motion, Lucide Icons
- * Usage: Save as app/page.tsx (or src/app/page.tsx) and ensure Tailwind is configured.
- */
+
 
 export default function Home() {
+
+    const [quality, setQuality] = useState(80); // default
+
+  useEffect(() => {
+    if (typeof navigator !== "undefined" && "connection" in navigator) {
+      const connection = (navigator as any).connection;
+
+      if (connection.saveData || connection.effectiveType.includes("2g")) {
+        setQuality(40);
+      } else if (connection.effectiveType.includes("3g")) {
+        setQuality(60);
+      } else if (connection.effectiveType.includes("4g")) {
+        setQuality(80);
+      } else {
+        setQuality(100); // WiFi, 5G, or unknown fast network
+      }
+    }
+  }, []);
   const skills = useMemo(
     () => [
       { name: "MongoDB", level: 90, icon: <Database className="size-5" /> },
@@ -197,7 +211,7 @@ export default function Home() {
                   <MapPin className="size-4" /> Kathmandu, Nepal
                 </div>
                 <div className="inline-flex items-center gap-2 text-xs">
-                  <Phone className="size-4" /> +977-98XXXXXXXX
+                  <Phone className="size-4" /> +977-9767015834
                 </div>
               </div>
             </motion.div>
@@ -215,7 +229,7 @@ export default function Home() {
                   alt="Developer"
                   width={1200}
                   height={800}
-                  quality={80}
+                  quality={quality}
                   className="rounded-2xl object-cover"
                 />
               </div>
@@ -477,7 +491,7 @@ export default function Home() {
               className="inline-flex items-center gap-2 hover:text-white"
               href="mailto:hello@example.com"
             >
-              <Mail className="size-4" /> hello@example.com
+              <Mail className="size-4" /> bhattarain538@gmail.com
             </a>
             <span className="inline-flex items-center gap-2">
               <MapPin className="size-4" /> Kathmandu, Nepal
